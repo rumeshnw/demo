@@ -16,8 +16,6 @@ C:\log4j-application.log
 .idea/*
 .idea/**/*
 
-.idea/workspace.xml
-.idea/gradle.xml
-.idea/misc.xml
-.idea/vcs.xml
+.gradle
+.gradle/**/*
 demo.iml
