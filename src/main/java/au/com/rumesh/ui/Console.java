@@ -1,5 +1,7 @@
 package au.com.rumesh.ui;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Scanner;
 import java.util.function.Consumer;
 
@@ -12,12 +14,16 @@ public interface Console {
 
     void startConsole();
 
-    static void withScanner(Consumer<Scanner> consumer){
+    default void withScanner(Consumer<Scanner> consumer){
         Scanner scanner = new Scanner(System.in);
         try {
             consumer.accept(scanner);
         } finally {
             scanner.close();
         }
+    }
+
+    default String trimUserInput(Scanner scanner){
+        return StringUtils.trimToNull(scanner.nextLine());
     }
 }

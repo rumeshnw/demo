@@ -8,7 +8,7 @@ public class ConsoleImpl implements Console {
 
     @Override
     public void startConsole() {
-        Console.withScanner(scanner -> {
+        withScanner(scanner -> {
             System.out.println("Welcome to demo console");
             while (true){
                 System.out.println("Please enter your name......");
